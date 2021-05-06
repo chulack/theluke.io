@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!----------------------------------------------------------------------------------------------------------------
+--
+#Original Author: Luke Chulack                         
+#Date Created: 02/26/2020                                     
+#Version: 2.0                                           
+#Date Last Modified: 02/26/2020                                
+#Modified by: Luke Chulack                                          
+#Modification log: 
+    version 1.0 - Old Porfolio 
+    version 2.0 - 02/26/2020 - restarted, built with w3schools (had to remove last minute due to conflict with fontawesome), simple-grid.css, skeleton, fontawesome and fullpage.js added a home, contact, potfolio and about.
+     version 3.0 - 05/05/2021  - moved menu code out of fullPage scope, added more to portfolio and about.
+
+    --
+---------------------------------------------------------------------------------------------------------------->
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Luke Chulack is a Programmer that will build your site.">
+        <meta name="keywords" content="coding,software,websites">
+        <meta name="author" content="Luke Christopher Chulack">
+
+        <meta property="og:title" content="Luke Chulack | American Programmer " />
+        <meta property="og:description" content="Luke Chulack is a Programmer that will build your site." />
+        <meta property="og:image" content="" />
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Luke Chulack | Software Devlopment ">
+        <meta name="twitter:site" content="@">
+        <meta name="twitter:description" content="Luke Chulack is a Programmer that will build your site.">
+
+
+        <title>
+
+             Luke Chulack | American Programmer 
+
+        </title>
+
+
+        <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+        <link rel="stylesheet" href="front-end/style/css/w3.css" >
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.css" integrity="sha512-RVmrWua3k1yTDEOg4Yzs2bK5+Thh7nM6jrhDq/6/5/Mwa0JbYe4pP4YMK5sqghKz01T3DgrwYc57Jaf1PSurCg==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="front-end/style/css/fontawesome-free-5.15.2-web/css/all.css" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+        <link rel="stylesheet" href="front-end/style/css/simple-grid.css">
+
+        <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+
+        <link rel="stylesheet" href="front-end/style/css/style.css" >
+
+        <link rel="icon" href="./front-end/media/images/other/icon.png"
+
+    </head>
+
+    <body id="main_body">
+        <!-- hamburger nav-->
+        <div id="myNav" class="overlay left_menu">
+            <a  class="closebtn" >&times;</a>
+            <div class="overlay-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a id="contact_2" href="#contact">Contact</a>
+            </div>
+        </div>
+                  <!-- contact page -->
+                  <div id="contact_menu" class="overlay right_menu">
+                    <a  class="closebtn_contact" >&times;</a>
+                    <div class="overlay-content">
+
+                        <h1>Contact Me</h1>
+
+                        <form id="form_main">
+
+                            <div>
+
+                                <input id="name" type="text" name="name" placeholder="Name">
+
+                            </div>
+
+                            <div>
+
+                                <input id="email" type="email" name="email" placeholder="Email">
+                                
+                            </div>
+                            <div>
+
+                                <textarea id="msg" placeholder="Message"></textarea>
+
+                                
+                            </div>
+                            <div>
+
+                                <input id="send_form" type="submit" name="send" value="Send">
+
+                                
+                            </div>
+
+                        </form>
+
+
+                    </div>
+                  </div>
+
+        <div id="fullPage">
+
+            <div id="home-page" class="section s1">
+
+                <div id="all_class_1">
+
+                <!-- nav bar -->
+                <nav>
+                    <h3 class="brand"><a href="#home">Luke Chulack</a></h3>
+
+                    <ul id="navbar">
+
+                        <li class="navbar-item">
+
+                            <a class="navbar-link" href="#home">Home</a>
+
+                        </li>
+
+                        <li class="navbar-item">
+
+                            <a class="navbar-link" id="about_btn_menu" href="#about">About</a>
+
+                        </li>
+
+                        <li class="navbar-item">
+
+                            <a class="navbar-link" id="contact_1" href="#contact">Contact Me</a>
+
+                        </li>
+
+                    </ul>
+                    <label id="menu">
+
+                        <i    id="menu-icon" class="fas fa-bars"></i>
+
+                    </label>
+
+                </nav>
+
+              
+
+                <!-- home content -->
+
+                <div id="home-div">
+
+                        <h2>I believe software should be made with purpose.</h2>
+                        <h4>Building software with vision to create ecosystems is key and core to my philosophy </h4>
+                    </div>
+                <div  id="arrow_container">
+                    <div data-anijs="if: mouseover, on: #arrow_1_home, do: pulse animated" id="arrow_1_home">
+                    <a  id="click_arrow" href="#about"> <div class="arrow_button">
+                       <i   class="arrow"></i>
+                    </div>
+                </a>
+
+                 </div>
+                </div>
+                </div>
+
+            </div>
+
+            <!-- about -->
+            <div  class="section s2">
+                <div id="all_class_2">
+
+                    <div class="row"  style="margin-left: 1rem;">
+                      
+                        <div class="col-6" >
+
+                            <h3 id="who_am">Who am I?</h3>
+                            <p id="p_about">My name is Luke Christopher Chulack. 
+                                I am an American Programmer that works with software and web development. 
+                                I enjoy building new things and seeing how those things can build onto bigger ecosystems. 
+                                My core skill set is the core technologies of HTML 5: HTML, CSS, and Javascript. 
+                                I have work with  MVC like frameworks such as Vue Js and Angular js.
+                            </p>
+
+                        </div>
+                        <div class="col-6">
+                        <div class=" earth" >
+                          
+                        </div>
+                    </div>
+
+                </div>
+                <div id="arrow_container_2">
+                    <div data-anijs="if: mouseover, on: #arrow_2_home, do: pulse animated" id="arrow_2_home">
+
+                    <a id="click_arrow" href="#work"> <div class="arrow_button">
+                       <i class="arrow"></i>
+                    </div>
+                </a>
+                </div>
+                 </div>
+                 <div id="social_media_bar">
+
+                 </div>
+                 <label id="menu_about">
+
+                     <i id="menu-icon-about" style="margin-left: 1rem;" class="fas fa-bars"></i>
+                   
+
+
+                </label>
+            </div>
+
+            </div>
+
+            <!-- projects -->
+
+            <div class="section s3">
+
+                <div id="all_class_3">
+
+                    <div class="" style="text-align: center;">
+                            <h4>Some of my portfolio:</h4>
+                        <div >
+                        
+                                <a href="https://chulack.github.io/snelfu_webpage/index.html" target="_blank" ><img src="front-end/media/images/works/new/snelfu.png" class="works_img works_img_to_small">
+                                </a>
+                                 <a href="https://chulack.github.io/boise_noodle_final/index.html" target="_blank" >
+                                <img src="front-end/media/images/works/new/boisenoodles.png" class="works_img works_img_not_small">
+                                 </a>
+
+                                 <a href="https://chulack.github.io/new_offer/index.html" target="_blank" >
+                                    <img  src="front-end/media/images/works/new/new_offer.png" class="works_img works_img_not_small_first">
+                                    </a>
+    
+                            </div>
+                         
+                            <div >
+                                <a href="https://chulack.github.io/boise_rock/index.html" target="_blank" >
+                                <img  src="front-end/media/images/works/new/boiserock.png" class="works_img works_img_to_small">
+                                </a>
+                                <a href="https://chulack.github.io/pop_magic_final/index.html" target="_blank" >
+                                <img src="front-end/media/images/works/new/popmagic.png" class="works_img works_img_not_small">
+                                </a>
+                                <a href="https://chulack.github.io/space_invaders/index.html" target="_blank" >
+                                    <img src="front-end/media/images/works/new/space_inv1.png" class="works_img works_img_not_small_first">
+                                    </a>
+                            </div>
+
+
+
+                            <a href="https://github.com/chulack/chulack.github.io" target="_blank" id="more_project" style="    color: #aaaaaa;
+                            "><p>More projects</p></a>
+                        </div>
+                <label id="menu_work">
+
+                    <i id="menu-icon-work"  style="margin-left: 1rem;" class="fas fa-bars"></i>
+                  
+    
+    
+               </label>
+              <footer >
+                  <ul>
+                    <div id="footer_tags">
+                    <li>
+
+                        <a href="https://twitter.com/" target="_blank" > <img data-anijs="if: mouseover, on: #icons_footer_1, do: swing animated" id="icons_footer_1" src="front-end/media/images/icons/twitter-AAAAAA-24.png"> </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="https://www.linkedin.com/in/theluke" target="_blank" >   <img data-anijs="if: mouseover, on: #icons_footer_2, do: swing animated" id="icons_footer_2" src="front-end/media/images/icons/linkedin-AAAAAA-24.png"> </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="https://github.com/chulack" target="_blank" > <img data-anijs="if: mouseover, on: #icons_footer_3, do: swing animated" id="icons_footer_3" src="front-end/media/images/icons/github-AAAAAA-24.png"> </a>
+
+                    </li>
+                    <li>
+
+                        <a href="https://dribbble.com/theluke" target="_blank"> <img data-anijs="if: mouseover, on: #icons_footer_4, do: swing animated" id="icons_footer_4" src="front-end/media/images/icons/dribbble-AAAAAA-24.png"> </a>
+
+                    </li>
+                    <li>
+
+                        <a href="https://www.behance.net/theluke" target="_blank"> <img data-anijs="if: mouseover, on: #icons_footer_5, do: swing animated" id="icons_footer_5" src="front-end/media/images/icons/behance-AAAAAA-24.png"> </a>
+
+                    </li>
+                    <li>
+
+                        <a href="mailto:chulack@theluke.io" > <img data-anijs="if: mouseover, on: #icons_footer_6, do: swing animated" id="icons_footer_6" src="front-end/media/images/icons/email-AAAAAA-24.png"> </a>
+
+                    </li>
+
+                  </ul>
+                </div>
+              </footer>
+              
+            </div>
+            </div>
+
+        </div>
+ 
+        <script src="front-end/style/css/fontawesome-free-5.15.2-web/js/all.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.js" integrity="sha512-XnvEFIQIK4NvMki+6FYKTM7XdnsbDAqHB2KLXfgFkafRQBtKOkLZQYjf7ydXd8OfrAn8vWS68ESil4GHtpdqPQ==" crossorigin="anonymous"></script>   
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
+        
+        <!-- anijs -->
+        <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
+        <script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
+
+        <script src="front-end/script/javascript/script.js"></script>
+
+    </body>
+
+</html>
