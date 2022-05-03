@@ -3,12 +3,13 @@
 ***
 *Original Author: Luke Chulack                         
 *Date Created: 02/26/2021                                     
-*Version: 1.0                                           
-*Date Last Modified: 02/26/2021                              
+*Version: 3.0                                           
+*Date Last Modified: 05/03/2022                              
 *Modified by: Luke Chulack        
 *Modification log:         
     version 1.0 - 02/26/2021 - styled all new elements talked about in the index mod log. used w3school tutoral to build hamber insteade of bootstrap. plans to replace fullpage js as it is very rigid 
     version 2.0 - 05/05/2021  -  cleaning of moblie first, worked to make work section better, made fullPage side bar go up when in moblie mode, add world animation i learned to make.
+    version 3.0 - 05/03/2022  -  added spinner css.
     ***
 ******************************************************************** */
 
@@ -507,6 +508,40 @@ footer ul li a {
 
 }
 
+.hide {
+    display: none;
+}
+
+
+
+/* spinner */ 
+#spinner {
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+  }
+.loader {
+    border: 16px solid #aaaaaa; /* Light grey */
+    border-top: 16px solid rgb(76, 67, 67); /* Blue */
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    animation: spin 2s linear infinite;
+    
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  
+  
 /* moblie first setup */
 @media screen and (min-width: 480px) {
 
@@ -677,7 +712,7 @@ footer ul li a {
 
 
     #more_project{
-        display: none;
+       /* display: none;*/
     }
 }
 

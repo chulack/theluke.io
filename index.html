@@ -3,14 +3,14 @@
 --
 #Original Author: Luke Chulack                         
 #Date Created: 02/26/2020                                     
-#Version: 2.0                                           
-#Date Last Modified: 02/26/2020                                
+#Version: 4.0                                           
+#Date Last Modified: 05/03/2022                                
 #Modified by: Luke Chulack                                          
 #Modification log: 
     version 1.0 - Old Porfolio 
     version 2.0 - 02/26/2020 - restarted, built with w3schools (had to remove last minute due to conflict with fontawesome), simple-grid.css, skeleton, fontawesome and fullpage.js added a home, contact, potfolio and about.
      version 3.0 - 05/05/2021  - moved menu code out of fullPage scope, added more to portfolio and about.
-
+    version 4.0 - 05/03/2022 -  made portfolio more modern. fixed forum, added spinner.
     --
 ---------------------------------------------------------------------------------------------------------------->
 
@@ -21,23 +21,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="description" content="Luke Chulack is a Programmer that will build your site.">
+        <meta name="description" content="Luke Chulack ( Čuljak )  is a Programmer that will build your site.">
         <meta name="keywords" content="coding,software,websites">
         <meta name="author" content="Luke Christopher Chulack">
 
         <meta property="og:title" content="Luke Chulack | American Programmer " />
-        <meta property="og:description" content="Luke Chulack is a Programmer that will build your site." />
+        <meta property="og:description" content="Luke Chulack ( Čuljak ) is a Programmer that will build your site." />
         <meta property="og:image" content="" />
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Luke Chulack | Software Devlopment ">
+        <meta name="twitter:title" content="Luke Chulack ( Čuljak ) | Software Devlopment ">
         <meta name="twitter:site" content="@">
-        <meta name="twitter:description" content="Luke Chulack is a Programmer that will build your site.">
+        <meta name="twitter:description" content="Luke Chulack ( Čuljak ) is a Programmer that will build your site.">
 
 
         <title>
 
-             Luke Chulack | American Programmer 
+             Luke Chulack ( Čuljak ) | American Programmer 
 
         </title>
 
@@ -59,13 +59,21 @@
     </head>
 
     <body id="main_body">
+        <div id="spinner" class="loader">
+
+
+        </div>
+
+
+        <div id="all" class="hide">
+
         <!-- hamburger nav-->
         <div id="myNav" class="overlay left_menu">
-            <a  class="closebtn" >&times;</a>
+            <a  class="closebtn closeMenu" >&times;</a>
             <div class="overlay-content">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a id="contact_2" href="#contact">Contact</a>
+            <a id="homeBTN"   href="#home">Home</a>
+            <a  id="aboutBTN" href="#about">About</a>
+            <a  id="contact_2"  href="#contact">Contact</a>
             </div>
         </div>
                   <!-- contact page -->
@@ -75,22 +83,25 @@
 
                         <h1>Contact Me</h1>
 
-                        <form id="form_main">
+                        <form id="form_main" method="POST"
+                        action=
+              "mailto: luke@theluke.io"
+                        enctype="multipart/form-data" >
 
                             <div>
 
-                                <input id="name" type="text" name="name" placeholder="Name">
+                                <input id="name" type="text" name="name" placeholder="Name" required>
 
                             </div>
 
                             <div>
 
-                                <input id="email" type="email" name="email" placeholder="Email">
+                                <input id="email" type="email" name="email" placeholder="Email" required>
                                 
                             </div>
                             <div>
 
-                                <textarea id="msg" placeholder="Message"></textarea>
+                                <textarea id="msg" name="msg" placeholder="Message" required></textarea>
 
                                 
                             </div>
@@ -115,7 +126,7 @@
 
                 <!-- nav bar -->
                 <nav>
-                    <h3 class="brand"><a href="#home">Luke Chulack</a></h3>
+                    <h3 class="brand"><a href="#home">Luke Chulack ( Čuljak ) </a></h3>
 
                     <ul id="navbar">
 
@@ -180,8 +191,8 @@
                             <p id="p_about">My name is Luke Christopher Chulack. 
                                 I am an American Programmer that works with software and web development. 
                                 I enjoy building new things and seeing how those things can build onto bigger ecosystems. 
-                                My core skill set is the core technologies of HTML 5: HTML, CSS, and Javascript. 
-                                I have work with  MVC like frameworks such as Vue Js and Angular js.
+                                My core skill set is the core technologies of HTML 5 (HTML, CSS, and Javascript) and C#. 
+                                I have work with  MVC like frameworks such as Vue Js, Angular js.
                             </p>
 
                         </div>
@@ -225,28 +236,25 @@
                             <h4>Some of my portfolio:</h4>
                         <div >
                         
-                                <a href="https://chulack.github.io/snelfu_webpage/index.html" target="_blank" ><img src="front-end/media/images/works/new/snelfu.png" class="works_img works_img_to_small">
-                                </a>
-                                 <a href="https://chulack.github.io/boise_noodle_final/index.html" target="_blank" >
-                                <img src="front-end/media/images/works/new/boisenoodles.png" class="works_img works_img_not_small">
-                                 </a>
+                         <img id="snelfu_webpage" src="front-end/media/images/works/new/snelfu.png" class="works_img works_img_to_small">
 
-                                 <a href="https://chulack.github.io/new_offer/index.html" target="_blank" >
-                                    <img  src="front-end/media/images/works/new/new_offer.png" class="works_img works_img_not_small_first">
-                                    </a>
+                                
+                         <img id="boise_noodle_final" src="front-end/media/images/works/new/boisenoodles.png" class="works_img works_img_not_small">
+
+
+                        <img id="new_offer"  src="front-end/media/images/works/new/new_offer.png" class="works_img works_img_not_small_first">
     
                             </div>
                          
                             <div >
-                                <a href="https://chulack.github.io/boise_rock/index.html" target="_blank" >
-                                <img  src="front-end/media/images/works/new/boiserock.png" class="works_img works_img_to_small">
-                                </a>
-                                <a href="https://chulack.github.io/pop_magic_final/index.html" target="_blank" >
-                                <img src="front-end/media/images/works/new/popmagic.png" class="works_img works_img_not_small">
-                                </a>
-                                <a href="https://chulack.github.io/space_invaders/index.html" target="_blank" >
-                                    <img src="front-end/media/images/works/new/space_inv1.png" class="works_img works_img_not_small_first">
-                                    </a>
+                            <img id="boiserock"  src="front-end/media/images/works/new/boiserock.png" class="works_img works_img_to_small">
+
+
+                            <img id="pop_magic_final" src="front-end/media/images/works/new/popmagic.png" class="works_img works_img_not_small">
+
+
+
+                            <img id="space_invaders" src="front-end/media/images/works/new/space_inv1.png" class="works_img works_img_not_small_first">
                             </div>
 
 
@@ -264,9 +272,10 @@
               <footer >
                   <ul>
                     <div id="footer_tags">
+
                     <li>
 
-                        <a href="https://twitter.com/" target="_blank" > <img data-anijs="if: mouseover, on: #icons_footer_1, do: swing animated" id="icons_footer_1" src="front-end/media/images/icons/twitter-AAAAAA-24.png"> </a>
+                        <a href="https://twitter.com/lukecchulack" target="_blank" > <img data-anijs="if: mouseover, on: #icons_footer_1, do: swing animated" id="icons_footer_1"  class="icons_footer" src="front-end/media/images/icons/twitter-AAAAAA-24.png"> </a>
 
                     </li>
 
@@ -296,7 +305,11 @@
                         <a href="mailto:chulack@theluke.io" > <img data-anijs="if: mouseover, on: #icons_footer_6, do: swing animated" id="icons_footer_6" src="front-end/media/images/icons/email-AAAAAA-24.png"> </a>
 
                     </li>
+                    <li>
 
+                        <a href="https://www.linkedin.com/groups/13653321" > <img data-anijs="if: mouseover, on: #icons_footer_7, do: swing animated" id="icons_footer_7" src="front-end/media/images/icons/school-AAAAAA-24.png"> </a>
+
+                    </li>
                   </ul>
                 </div>
               </footer>
@@ -305,7 +318,7 @@
             </div>
 
         </div>
- 
+    </div>
         <script src="front-end/style/css/fontawesome-free-5.15.2-web/js/all.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.js" integrity="sha512-XnvEFIQIK4NvMki+6FYKTM7XdnsbDAqHB2KLXfgFkafRQBtKOkLZQYjf7ydXd8OfrAn8vWS68ESil4GHtpdqPQ==" crossorigin="anonymous"></script>   
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
